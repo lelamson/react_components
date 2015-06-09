@@ -11,7 +11,6 @@ var cardRoutes = express.Router();
 
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/cards_dev');
 
-
 require('./routes/cards_routes')(cardRoutes);
 
 app.use('/magic', cardRoutes);
