@@ -7,7 +7,7 @@ var Card = require('./card.jsx');
 module.exports = React.createClass({
   renderCards: function () {
     return this.props.data.map(function (card) {
-      return <Card data={card} />;
+      return <Card data={card} key={card._id} />;
     })
   },
 
@@ -18,5 +18,4 @@ module.exports = React.createClass({
       </ul>
     )
   }
-
 });

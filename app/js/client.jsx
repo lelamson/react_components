@@ -6,8 +6,8 @@ var CardForm = require('./components/card_form.jsx');
 var request = require('superagent');
 
 var testCards = [
-  {spell: "Fireball", color: "Red", cost: 2},
-  {spell: "Giant", color: "Green", cost: 3}
+  {_id: 100, spell: "Fireball", color: "Red", cost: 2},
+  {_id: 200, spell: "Giant", color: "Green", cost: 3}
 ];
 
 var App = React.createClass({
@@ -41,7 +41,6 @@ var App = React.createClass({
       </main>
     )
   }
-
 });
 
 React.render(
