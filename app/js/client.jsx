@@ -2,10 +2,14 @@
 
 var React = require('react');
 var CardList = require('./components/cards_list.jsx');
+var CardForm = require('./components/card_form.jsx');
 var request = require('superagent');
 
-var testCards = [{spell: 'Fireball', color: 'Red', cost: '2'},
-                  {spell: 'Giant', color: 'Green', cost: '3'}];
+var testCards = [
+  {spell: "Fireball", color: "Red", cost: 2},
+  {spell: "Giant", color: "Green", cost: 3}
+];
+
 var App = React.createClass({
   getInitialState: function () {
     return {cards: []};
@@ -24,14 +28,16 @@ var App = React.createClass({
   componentDidMount: function () {
     // this.getCardsFromServer();
     this.setState({cards: testCards});
-    setInterval(this.getCardsFromServer, this.props.pollInterval);
+    // setInterval(this.getCardsFromServer, this.props.pollInterval);
   },
 
   render: function () {
     return (
       <main>
         <label>Cards:</label>
-        <CardList data={this.state.cards.spell} />
+        <CardList data={this.state.cards} />
+        <br></br>
+        <CardForm />
       </main>
     )
   }
