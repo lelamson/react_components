@@ -16,7 +16,7 @@ module.exports = function (router) {
     });
   });
 
-  router.post('/cards', function (req, res) {
+  router.post('/cards', function(req, res) {
     var newCard = new Card(req.body);
     newCard.save(function (err, data) {
       if (err) {

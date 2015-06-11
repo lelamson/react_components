@@ -26,8 +26,8 @@ var App = React.createClass({
   },
 
   componentDidMount: function () {
-    // this.getCardsFromServer();
-    this.setState({cards: testCards});
+    this.getCardsFromServer();
+    // this.setState({cards: testCards});
     // setInterval(this.getCardsFromServer, this.props.pollInterval);
   },
 
